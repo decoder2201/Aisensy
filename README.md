@@ -1,65 +1,3 @@
-# Contact Manager
-
-#### Project deployed link -> [Contact Manager](https://contact-manager-mern-cg19.onrender.com/)
-
----
-
-## :pencil: About The Project
-
-Contact Manager is a web application that allows users to manage their contacts with privacy.
-
----
-
-## :cloud: Overview
-
-This project is created as a MERN (MongoDB, Express.js, React, Node.js) App. It allows users to add, edit, delete, and search for contacts, along with viewing individual contact details. The project also includes a Switching between dark and light mode, and the user's theme preference is saved in local storage, so the mode will remain the same as the last time they left. All data is saved on the MongoDB server, and the project has a 0 refresh rate achieved using routers.
-
----
-
-## 💻 Tech Stack
-
-- Basics: HTML, CSS, and Javascript.
-- Client: React, Redux, and React Router.
-- Server: Nodejs, Expressjs, and MongoDB.
-
----
-
-## :floppy_disk: Project Files Description
-
-### Frontend
-
-- **client/public/index.html**: This File contains stylesheet links and root div.
-- **client/src/components/App.js**: This JS File imports all other JS component files and binds them together with the help of the router. Its content is spread throughout all routes.
-- **client/src/components/AddContact.js**: This contains the HTML structure of the /addcontact route, which takes data in form-based and passes it to app.js, which stores it in local storage.
-- **client/src/components/App.css**: This contains all the styling of each route page.
-- **client/src/components/ContactCard.js**: This contains each individual contact card's details displayed on the front page, along with edit and delete buttons.
-- **client/src/components/ContactDetails.js**: This contains details of individual contacts when tapped on them.
-- **client/src/components/ContactList.js**: This contains the full list of all contacts displayed on the front page.
-- **client/src/components/EditContact.js**: This File Contains the editing page UI where you can edit contact details from old data.
-- **client/src/components/Header.js**: This contains the header part which is a fixed part for every route.
-- **client/src/components/darkmode.js**: This contains the dark mode switching feature onclick and also saves the selected mode to local storage.
-- **client/src/components/predata.js**: This is an array of data that is given from before.
-- **client/src/index.js**: This binds App.js to the HTML root div.
-
-### Backend
-
-- **config/db.js**: This contains the Database Connectivity function.
-- **config/default.js**: This contains the Database URL (i.e. MongoURL).
-- **models/Contact.js**: This contains the structure of the Contact.
-- **routes/api/contacts.js**: This contains all CRUD operation routes to be performed.
-- **index.js**: This is the main file of the backend or server side.
-
----
-
-## 📼 How you can run it Locally
-
-1. Go to the code section above and download it as a zip.
-2. Extract the zip file, then open the extracted folder in vscode.
-3. Press ctrl+j on Windows, it will open the terminal to this folder.
-4. Now run the command npm run dev, which will launch this on localhost:3000 and the server at localhost:3006. (If it doesn't redirect you, then manually search localhost:3000).
-5. Done! Now you will be able to see the project running on your system.
-
----
 
 ## Project Images
 
@@ -70,3 +8,87 @@ This project is created as a MERN (MongoDB, Express.js, React, Node.js) App. It 
 ![Contact Manager](./client/images/1_5.png)
 ![Contact Manager](./client/images/1_6.png)
 ![Contact Manager](./client/images/1_7.png)
+
+
+**Contact Management Web Application - MERN Stack**
+
+## Overview
+This repository contains the code for a contact management web application built using the MERN (MongoDB, Express.js, React, Node.js) stack. The application includes features such as contact import, pagination, filtering, and contact download.
+
+## Features
+1. **Contact Listing:**
+   - User-friendly interface displaying imported contacts.
+   - Pagination for easy navigation (10 contacts per page).
+   - Fields include contact name, phone number, email, and additional relevant information.
+
+2. **Contact Import:**
+   - Import contacts from both CSV and Excel files.
+   - Validate file formats and display error messages for invalid files.
+   - Trigger import process with a button or UI element.
+  
+3. **Contact Filtering:**
+   - Intuitive filtering mechanism allowing users to apply multiple filters.
+   - Filters include date of creation, name, phone number, country code, and more.
+   - Instant feedback on filtered results.
+
+4. **Contact Download:**
+   - Select one or more contacts for download in Excel format.
+   - User-friendly selection mechanism.
+   - Trigger download process with a button or UI element.
+
+## Backend Development
+- Node.js server using Express.js to handle API requests.
+- RESTful APIs for contact import, filtering, and download functionalities.
+- Logic to parse and process imported CSV and Excel files.
+- MongoDB database to store imported contacts.
+
+## Frontend Development
+- User-friendly and responsive contact listing UI built with React.
+- Pagination controls for easy navigation.
+- Intuitive filtering mechanism for applying multiple filters.
+- Selection mechanism for contact download.
+
+## Deployment
+1. **Backend Deployment:**
+   - Deploy the Node.js server to a suitable platform (e.g., Heroku).
+   - Set up the MongoDB database and configure the connection.
+
+2. **Frontend Deployment:**
+   - Deploy the React app to a suitable platform (e.g., Netlify, Vercel).
+   - Update API URLs in the frontend to match the deployed backend.
+
+## How to Run Locally
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/contact-management-app.git
+   cd contact-management-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   cd client
+   npm install
+   cd ../server
+   npm install
+   ```
+
+3. Run the backend server:
+   ```bash
+   cd server
+   node index.js
+   ```
+
+4. Run the React app:
+   ```bash
+   cd client
+   npm start
+   ```
+
+5. Open your browser and visit http://localhost:3000 to see the contact management app.
+
+## Additional Notes
+- Test the functionality with various datasets to ensure compatibility.
+- Follow industry-standard practices for handling data, file uploads, and implementing features.
+- Feel free to customize the application based on specific requirements.
+
+**Note:** Ensure that all features work seamlessly together for an improved user experience.
